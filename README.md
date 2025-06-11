@@ -1,9 +1,11 @@
 # Dataset_Laboratorio
 
 # IMPORTANTE
-1)En la carpeta Data Modificar el .env para poder conectarse a la base de datos.
+1)Para descargar las dependencias:    pip install -r requirements.txt
+
+2)En la carpeta Data Modificar el .env para poder conectarse a la base de datos.
  
-2)Yo utilice PostgreSQL asi que hay que modificar la URL en data_saver.py    . Yo deje una linea para MYSQL comentada(No se si funciona), utilizar esa y comentar la de PostgreSQL.
+3)Yo utilice PostgreSQL asi que hay que modificar la URL en data_saver.py    . Yo deje una linea para MYSQL comentada(No se si funciona), utilizar esa y comentar la de PostgreSQL.
 
 
 
