@@ -36,7 +36,7 @@ class DataSet(ABC):
         if self.datos.isnull().sum().sum() > 0 :
             print('Datos faltantes detectados\n')
             print('¿Desea eliminar las filas nulas?')
-            Entrada = input('Ingrese SI o NO :').lower()
+            Entrada = input('Ingrese SI o NO: ').lower()
             while Entrada not in ['si', 'no']:
                 Entrada = input('Error por favor ingrese SI o NO: ').lower()
             if Entrada == 'si':
@@ -48,7 +48,7 @@ class DataSet(ABC):
         if self.datos.duplicated().sum() > 0:
             print('Filas duplicadas detectadas')
             print('¿Desea eliminar las filas duplicadas?')
-            Entrada = input('Ingrese SI o NO :').lower()
+            Entrada = input('Ingrese SI o NO: ').lower()
             while Entrada not in ['si', 'no']:
                 Entrada = input('Error por favor ingrese SI o NO: ').lower()
             if Entrada == 'si':
