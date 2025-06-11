@@ -10,8 +10,8 @@ class DataSetExcel(DataSet):
             df = pd.read_excel(self.archivo)
             self.datos = df
             print('Excel Cargado')
-            self.validarDatos()
-            print('Datos validados')
+            if self.validarDatos():
+                print('Datos validados')
             
         except Exception as e:
             print(f'Error al cargar los datos en excel: {e}')

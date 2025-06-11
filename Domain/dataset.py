@@ -60,7 +60,7 @@ class DataSet(ABC):
         #         self.datos[column] = pd.to_datetime(self.datos[column], errors='coerce')
         #     elif column.endswith('_num'):
         #         self.datos[column] = pd.to_numeric(self.datos[column], errors='coerce') 
-        #return True
+        return True
     
     
     def transformarDatos(self):
