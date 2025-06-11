@@ -13,7 +13,8 @@ class DataSaver:
         database = config('DB_NAME')
         
         #MySQL
-        # url = f'mysql+psycopg2://{user}:{password}@{host}:{port}/{database}'
+        # url = f'mysql+psmysql://{user}:{password}@{host}:{port}/{database}'
+        
         #PostgreSQL
         url = f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}'
         self.engine = create_engine(url)
