@@ -41,7 +41,8 @@ class DataSet(ABC):
                 Entrada = input('Error por favor ingrese SI o NO: ').lower()
             if Entrada == 'si':
                 #llamo a la funcion de eliminar datos
-                eliminarDatosNulos(self.datos)
+                dt = eliminarDatosNulos(self.datos)
+                self.datos = dt
         
         #Verifico si hay filas Duplicadas y si las hay, pregunto si las quiere eliminar
         if self.datos.duplicated().sum() > 0:
@@ -52,7 +53,8 @@ class DataSet(ABC):
                 Entrada = input('Error por favor ingrese SI o NO: ').lower()
             if Entrada == 'si':
                 #llamo a la funcion de eliminar datos
-                eliminarDatosDuplicados(self.datos)
+                dt = eliminarDatosDuplicados(self.datos)
+                self.datos = dt
                 
         # Validar fecha y si es numerico
         # for column in self.datos.columns:

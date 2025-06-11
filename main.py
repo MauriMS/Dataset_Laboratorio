@@ -6,12 +6,12 @@ from Domain.dataset_txt import DataSetTXT
 excel_path = path.join(path.dirname(__file__),'files/productos.xlsx')
 txt_path = path.join(path.dirname(__file__),'files/titanic.txt')
 
-txt = DataSetTXT(txt_path)
-txt.cargarDatos()
+# txt = DataSetTXT(txt_path)
+# txt.cargarDatos()
 
-# excel = DataSetExcel(excel_path)
-# excel.cargarDatos()
+excel = DataSetExcel(excel_path)
+excel.cargarDatos()
 
 db = DataSaver()
-#db.guardaDataFrame(excel.datos,'productos_xlsx')
-db.guardaDataFrame(txt.datos,'titanic_txt')
+db.guardaDataFrame(excel.datos,'productos_xlsx')
+#db.guardaDataFrame(txt.datos,'titanic_txt')
