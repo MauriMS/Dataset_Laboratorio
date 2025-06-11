@@ -9,7 +9,7 @@ class DataSet(ABC):
         
     @property
     def archivo(self):
-        return self.archivo
+        return self.__archivo
     
     @archivo.setter
     def archivo(sefl,archivo):
@@ -24,7 +24,7 @@ class DataSet(ABC):
         self.__datos = datos
     
     @abstractmethod
-    def cargar_datos(self):
+    def cargarDatos(self):
         pass
     
     def validarDatos(self):
@@ -55,13 +55,12 @@ class DataSet(ABC):
                 eliminarDatosDuplicados(self.datos)
                 
         # Validar fecha y si es numerico
-        for column in self.datos.columns:
-            if column.endswith('_date'):
-                self.datos[column] = pd.to_datetime(self.datos[column], errors='coerce')
-            elif column.endswith('_num'):
-                self.datos[column] = pd.to_numeric(self.datos[column], errors='coerce') 
-                
-        return True
+        # for column in self.datos.columns:
+        #     if column.endswith('_date'):
+        #         self.datos[column] = pd.to_datetime(self.datos[column], errors='coerce')
+        #     elif column.endswith('_num'):
+        #         self.datos[column] = pd.to_numeric(self.datos[column], errors='coerce') 
+        #return True
     
     
     def transformarDatos(self):
