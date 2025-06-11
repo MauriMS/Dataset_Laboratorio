@@ -30,6 +30,7 @@ class DataSaver:
         
         try:
             df.to_sql(nombre_tabla,con=self.engine, if_exists='replace', index=False)
+            print('\n'+'Guardado de datos'.center(80,'-'))
             print(f'Datos guardados en table: {nombre_tabla}')
             
             

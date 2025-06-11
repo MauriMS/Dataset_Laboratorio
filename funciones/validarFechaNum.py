@@ -10,8 +10,9 @@ def validarFechaNum(datos:pd.DataFrame) -> pd.DataFrame:
             datos[column] = pd.to_numeric(datos[column], errors='coerce') 
             
     if datos.isnull().sum().sum() > 0 :
-            print('Se Detectaron errores de formato en la Fecha y en los numeros\n')
-            print('Se cambiaron datos erroneos por null\n')
+            print('\n'+'Errores de formato'.center(80,'*'))
+            print('Se Detectaron errores de formato en la Fecha y en los numeros')
+            print('Se cambiaron datos erroneos por null')
             print('¿Desea eliminar las filas nulas?')
             Entrada = input('Ingrese SI o NO: ').lower()
             while Entrada not in ['si', 'no']:

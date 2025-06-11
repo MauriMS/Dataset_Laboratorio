@@ -9,9 +9,9 @@ class DataSetTXT(DataSet):
         try:
             df = pd.read_csv(self.archivo, sep=';')
             self.datos = df
-            print('TXT cargado')
+            print('\n'+'TXT cargado'.center(80,'-')+'\n')
             if self.validarDatos():
-                print('Datos validados')
+                print('Datos validados\n')
             
             
         

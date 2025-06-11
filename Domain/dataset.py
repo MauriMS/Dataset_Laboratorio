@@ -35,7 +35,7 @@ class DataSet(ABC):
         
         #Verifico si los datos son nulos y si lo son, pregunto si los quiere eliminar
         if self.datos.isnull().sum().sum() > 0 :
-            print('Datos faltantes detectados\n')
+            print('Datos faltantes detectados')
             print('¿Desea eliminar las filas nulas?')
             Entrada = input('Ingrese SI o NO: ').lower()
             while Entrada not in ['si', 'no']:
@@ -47,7 +47,7 @@ class DataSet(ABC):
         
         #Verifico si hay filas Duplicadas y si las hay, pregunto si las quiere eliminar
         if self.datos.duplicated().sum() > 0:
-            print('Filas duplicadas detectadas')
+            print('\nFilas duplicadas detectadas')
             print('¿Desea eliminar las filas duplicadas?')
             Entrada = input('Ingrese SI o NO: ').lower()
             while Entrada not in ['si', 'no']:
@@ -61,7 +61,3 @@ class DataSet(ABC):
         dt = validarFechaNum(self.datos)
         self.datos = dt
         return True
-    
-    
-    def transformarDatos(self):
-        pass
