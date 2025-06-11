@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from funciones.eliminarDuplicados import eliminarDatosDuplicados
 from funciones.eliminarNulos import eliminarDatosNulos
+from funciones.validarFechaNum import validarFechaNum
 
 class DataSet(ABC):
     def __init__(self,archivo):
@@ -56,12 +57,9 @@ class DataSet(ABC):
                 dt = eliminarDatosDuplicados(self.datos)
                 self.datos = dt
                 
-        # Validar fecha y si es numerico
-        # for column in self.datos.columns:
-        #     if column.endswith('_date'):
-        #         self.datos[column] = pd.to_datetime(self.datos[column], errors='coerce')
-        #     elif column.endswith('_num'):
-        #         self.datos[column] = pd.to_numeric(self.datos[column], errors='coerce') 
+        #Validar fecha y si es numerico
+        dt = validarFechaNum(self.datos)
+        self.datos = dt
         return True
     
     
